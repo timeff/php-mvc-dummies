@@ -115,13 +115,14 @@ class InputPanel extends React.Component{
                                 checked={this.state.showInterest} 
                                 onChange={this.handleShowInterest.bind(this)}
                                 /> 
+                                &nbsp;
                                 Interest Rate Adjust 
 
                                 &nbsp;
                                 <input type='checkbox' 
                                 checked={this.state.showFreq} 
                                 onChange={this.handleShowFreq.bind(this)}/> 
-                             
+                                &nbsp;
                                 Frequency Adjust
                             </div>
                         </form>
