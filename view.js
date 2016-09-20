@@ -9,10 +9,9 @@ class App extends React.Component{
     }
 
     getAnswer(amt,pb,int,freq){
-        fetch(`api.php?amt=${amt}&pb=${pb}&int=${int}&freq=${freq}`)
-        .then(jsonResponse=>jsonResponse.json())
-        .then(data=> this.setState({answer:data}))
-        .then(()=>{
+        $.getJSON(`api.php?amt=${amt}&pb=${pb}&int=${int}&freq=${freq}`)
+        .done(data=> this.setState({answer:data}))
+        .done(()=>{
             this.drawGraph(this.state.answer.graph)
         })
     }
